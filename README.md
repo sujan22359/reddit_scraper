@@ -1,8 +1,8 @@
-# 🧠 Reddit User Persona Generator
+# Reddit User Persona Generator
 
 An AI-powered tool that analyzes Reddit user activity and generates detailed personality profiles using Google's Gemini AI.
 
-## 🌟 Features
+## Features
 
 - **Reddit Data Scraping**: Extracts posts and comments from any Reddit user
 - **AI Analysis**: Uses Google Gemini to analyze user behavior and generate personas
@@ -10,13 +10,13 @@ An AI-powered tool that analyzes Reddit user activity and generates detailed per
 - **Detailed Profiles**: Generates comprehensive personas including personality traits, interests, and communication style
 - **Evidence-Based**: All traits are backed by specific Reddit posts/comments with links
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Python 3.8+
 - Reddit API credentials
 - Google Gemini API key
 
-## ⚙️ Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -38,7 +38,7 @@ An AI-powered tool that analyzes Reddit user activity and generates detailed per
    GEMINI_API_KEY="your_gemini_api_key"
    ```
 
-## 🔑 API Setup
+## API Setup
 
 ### Reddit API
 1. Go to [Reddit Apps](https://www.reddit.com/prefs/apps)
@@ -50,7 +50,7 @@ An AI-powered tool that analyzes Reddit user activity and generates detailed per
 2. Create an API key
 3. Add it to your `.env` file
 
-## 🖥️ Usage
+## Usage
 
 ### Web Interface
 ```bash
