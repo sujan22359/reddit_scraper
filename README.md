@@ -65,4 +65,3 @@ Then open http://localhost:8501 in your browser.
 python generate_persona.py
 ```
 
-
