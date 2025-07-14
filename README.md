@@ -57,9 +57,7 @@ An AI-powered tool that analyzes Reddit user activity and generates detailed per
 streamlit run streamlit_app.py
 ```
 Then open http://localhost:8501 in your browser.
-## 🎥 Demo
 
-<video src="https://user-images.githubusercontent.com/sujan22359/Reddit_scraper output video.mp4" controls></video>
 
 
 ### Command Line
