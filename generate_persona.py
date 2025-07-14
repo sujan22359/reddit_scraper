@@ -1,5 +1,3 @@
-# generate_persona.py
-
 import os
 import re
 from urllib.parse import urlparse
@@ -10,7 +8,6 @@ import google.generativeai as genai
 
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-
 
 def format_prompt(posts: List[Dict], comments: List[Dict]) -> str:
     prompt = "You are a sociologist and behavioral analyst. Based on the Reddit posts and comments below, generate a user persona including:\n\n"
