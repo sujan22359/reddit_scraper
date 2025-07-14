@@ -1,5 +1,3 @@
-# streamlit_app.py
-
 import streamlit as st
 from reddit_scraper import scrape_user_content
 from generate_persona import generate_persona, save_persona_file, improve_format, extract_username_from_url

@@ -6,14 +6,12 @@ from urllib.parse import urlparse
 from typing import Dict, List
 from dotenv import load_dotenv
 
-import google.generativeai as genai  # Gemini-specific import
+import google.generativeai as genai  
 
-# Load Gemini API key from .env file
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 
-# 🧠 Step 1: Format prompt using Reddit posts/comments
 def format_prompt(posts: List[Dict], comments: List[Dict]) -> str:
     prompt = "You are a sociologist and behavioral analyst. Based on the Reddit posts and comments below, generate a user persona including:\n\n"
     prompt += "- Name (if detectable)\n- Age (estimate)\n- Interests\n- Personality traits\n- Communication style\n- Political or social views (if any)\n- Writing tone\n- Occupation (if detectable)\n\n"
@@ -27,23 +25,14 @@ def format_prompt(posts: List[Dict], comments: List[Dict]) -> str:
     for comment in comments:
         prompt += f"[COMMENT] {comment['body']} (Subreddit: {comment['subreddit']})\nLink: {comment['permalink']}\n\n"
 
-    return prompt[:15000]  # Truncate for safety
-
-
-# 🧠 Step 2: Generate persona via Gemini
+    return prompt[:15000] 
 def generate_persona(posts: List[Dict], comments: List[Dict]) -> str:
     prompt = format_prompt(posts, comments)
-
-    # Load the Gemini model
     model = genai.GenerativeModel('gemini-1.5-flash')
-
-    # Generate a response
     response = model.generate_content(prompt)
 
     return response.text.strip()
 
-
-# 🧼 Step 3: Improve formatting for output
 def improve_format(file_path: str) -> str:
     with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()
@@ -75,9 +64,6 @@ def improve_format(file_path: str) -> str:
         f.write(improved)
 
     return improved_path
-
-
-# 📝 Step 4: Save persona file
 def save_persona_file(username: str, persona: str) -> str:
     output_dir = "outputs"
     os.makedirs(output_dir, exist_ok=True)
@@ -85,9 +71,6 @@ def save_persona_file(username: str, persona: str) -> str:
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(persona)
     return filepath
-
-
-# 🔍 Optional: Extract username from full Reddit URL
 def extract_username_from_url(url: str) -> str:
     parsed = urlparse(url)
     parts = parsed.path.strip("/").split("/")
