@@ -20,8 +20,8 @@ An AI-powered tool that analyzes Reddit user activity and generates detailed per
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/reddit-persona-generator.git
-   cd reddit-persona-generator
+   git clone https://github.com/sujan22359/reddit_scraper.git
+   cd reddit_scraper
    ```
 
 2. **Install dependencies**
