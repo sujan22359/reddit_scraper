@@ -1,7 +1,7 @@
 # Reddit User Persona Generator
 
 An AI-powered tool that analyzes Reddit user activity and generates detailed personality profiles using Google's Gemini AI.
-
+                                              
 ## Features
 
 - **Reddit Data Scraping**: Extracts posts and comments from any Reddit user
